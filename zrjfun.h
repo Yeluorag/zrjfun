@@ -100,7 +100,7 @@ typedef struct ArgumentList_tag {
 
 typedef struct {
 	 char 		*variable;
-	 Expression *operand;
+	 Expression *operand;		/* right value */
 } AssignExpression;     /* assign expr */
 
 typedef struct {
@@ -112,7 +112,7 @@ typedef struct { 		/* func call */
 	char 				*identifier;
 	ArgumentList 		*argument;
 } FunctionCallExpression;  
-
+      
 struct Expression_tag {
 	ExpressionType type;
 	int line_number;
